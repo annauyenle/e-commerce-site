@@ -13,25 +13,31 @@ const Product = ({ product }) => {
       <Card>
         <Card.Img variant="top" src={product.image} alt={product.name} />
         <Card.Body>
-          <Card.Title>{product.name}</Card.Title>
-          <Card.Subtitle>
-            <div>${product.price.split(".")[0]}</div>
+          <div className='product-name'>{product.name}</div>
+          <div>
+            <div className='product-details'>${product.price.split(".")[0]}</div>
             {product.instantDelivery ?
-              <div>Instant Delivery</div> :
-              <div>Ships within 3-5 business days</div>
+              <div className='product-details'>Instant Delivery!</div> :
+              <div className='product-details'>Ships within 3-5 business days</div>
             }
-            <Rating rating={product.rating} />
-          </Card.Subtitle>
+            <div className='product-details'>
+              <Rating rating={product.rating} />
+            </div>
+          </div>
           {
             cart.some(p => p.id === product.id) ?
               <Button
+                size="sm"
+                variant="Secondary"
                 onClick={() => {
                   dispatch({
                     type: 'removeFromCart',
                     payload: product
                   });
-                }} variant="danger">Remove from cart</Button> :
+                }}>Remove from cart</Button> :
               <Button
+                size="sm"
+                variant="dark"
                 onClick={() => {
                   dispatch({
                     type: 'addToCart',

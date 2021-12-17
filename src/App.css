@@ -1,4 +1,87 @@
+.App {
+  font-family: 'Merriweather', serif;
+  margin: 0 15% 0 15%;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.nav-bar {
+  width: 100%;
+  margin: 0% 5% 0% 5%;
+  background-color: #2F3841;
+}
+
+.logo {
+  width: 20%;
+  display: inline-block;
+}
+
+.search-bar {
+  width: 70%;
+  margin: 0 2% 0 2%;
+  display: inline-block;
+}
+
+.cart-icon {
+  display: inline-block;
+}
+
+.cart-item {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px;
+  margin-bottom: 20px;
+}
+
+.filter-bar {
+  margin: 1%;
+  padding: 2% 10% 1% 10%;
+  border-top: 1px #2F3841 solid;
+  border-bottom: 1px #2F3841 solid;
+  text-align: center; 
+  align-items: center;
+  font-size: smaller;
+}
+
+.filter-title {
+  display: inline-block;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.filter-options {
+  text-align: left;
+}
+
+.rating {
+  display: inline-block;
+}
+
+.rating-stars {
+  display: flex;
+  flex-direction: row;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 .product-card {
-  width: 30%;
-  margin: 3%;
+  width: 22%;
+  margin: 1%;
+  text-align: center;
+}
+
+.product-name {
+  font-weight: bold;
+  font-size: 90%;
+  margin-bottom: 2%;
+}
+
+.product-details {
+  font-size: 80%;
+  margin-bottom: 2%;
 }

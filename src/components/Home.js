@@ -8,7 +8,9 @@ function Home() {
   return (
     <div>
       <FilterBar />
-      {products.map(product => <Product product={product} key={product.id} />)}
+      <div className='product-container'>
+        {products.map(product => <Product product={product} key={product.id} />)}
+      </div>
     </div>
   );
 }
